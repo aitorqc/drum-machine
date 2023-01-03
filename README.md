@@ -8,4 +8,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Images
 
-![alt Dark Mode](https://github.com/aitorqc/drum-machine/blob/master/public/Drum-Machine.png)
+![alt Dark Mode](https://github.com/aitorqc/drum-machine/blob/main/public/Drum-Machine.png)
