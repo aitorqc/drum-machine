@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +13,134 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  outline: 5px solid orange;
+  width: 660px;
+  text-align: center;
+  background-color: #b3b3b3;
+  display: flex;
+}
+
+/* Buttons */
+.App .pad-bank {
+  width: 332px;
+  height: 272px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.App .pad-bank .drum-pad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 100px;
+  height: 80px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* Controls */
+.App .controls-container {
+  width: 240px;
+  height: 272px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App .controls-container .control {
+  width: 100px;
+  margin: auto;
+}
+
+.App .controls-container .control p {
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-bottom: .25rem;
+}
+
+.App .controls-container .control .select {
+  margin: auto;
+  border: 1px solid black;
+  width: 60px;
+  height: 28px;
+  padding: 1px;
+  background-color: black;
+}
+
+.App .controls-container .control .select .inner {
+  width: 23px;
+  height: 100%;
+  background: white;
+  border: 1px solid black;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.App .controls-container #display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-height: 50px;
+  background-color: gray;
+  margin: 15px auto;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.App .controls-container .volume-slider {
+  width: 100%;
+}
+
+input[type=range] {
+  height: 20px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background-color: #b3b3b3;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000;
+  background: #3071A9;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+  height: 28px;
+  width: 15px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -11px;
 }
